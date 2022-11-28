@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registre-se</title>
+    <link rel="stylesheet" href="assets/global.css">
+</head>
+<body>
+
+    <nav id="menu-h">
+        <ul>
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li><a href="produtos.html">Produtos</a></li>
+            
+            <li><a href="nossa-historia.html">Quem Somos</a></li>
+            
+            <li><a href="https://instagram.com/boomb.sp/">Contato</a></li>
+            
+            <li><a href="login.html">Entrar</a></li>
+        </ul>
+    </nav>
+
+<main class="container">
+        <h2>Registre-se</h2>
+        <form action="db/insere.php" method="POST" name="formulario"> <!-- conexão com a página que registra no banco de dados -->
+            <div class="input-field">
+                <input type="email" name="email" id="email" autocomplete="off" required placeholder="Insira Seu Email"> <!-- o usuário insere o email -->
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <input type="text" name="nome" id="name" autocomplete="off" required placeholder="Insira Seu Nome Completo"> <!-- o usuário insere o Nome Completo -->
+                <div class="underline"></div>
+            </div><br>
+            <div class="input-field">
+                <input type="password" name="senha" id="senha" autocomplete="off" required minlength="6" 
+                 maxlength="14" placeholder="Insira Sua Senha"> <!-- o usuário insere a senha -->
+                <div class="underline"></div>
+            </div> <br>
+            <div class="input-field">
+            <input type="password" name="senha1" id="senha1" required minlength="6" 
+            maxlength="10" placeholder="Repita Sua Senha" onblur="validarSenha('senha','senha1')" > <!-- o usuário repete a senha inderida para que haja conferência de equalidade -->
+                <div class="underline"></div>
+            </div> <br>
+
+           <p>Tudo Pronto?<input type="submit" class="submit" value="Enviar"></p> <br>
+        </form>
+        
+        <p>Fornecedor? Faça parte do nosso time</p>
+        <a href="registro-fornecedor.html"><input type="button" class="submit" value="Registrar "></a>
+    </main>
+</body>
+
+</html>

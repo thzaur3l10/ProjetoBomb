@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fornecedor, Registre-se</title>
+    <link rel="stylesheet" href="assets/global.css">
+</head>
+<body>
+
+    <nav id="menu-h">
+        <ul>
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li><a href="produtos.html">Produtos</a></li>
+            
+            <li><a href="nossa-historia.html">Quem Somos</a></li>
+            
+            <li><a href="https://instagram.com/boomb.sp/">Contato</a></li>
+            
+            <li><a href="login.html">Entrar</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h2>Olá Fornecedor</h2>
+        <p>Registre-se e faça parte do nosso time!</p><br>
+        <form action="/db/insere-fornecedor.php" name="formulario" method="POST">
+            <div class="input-field">
+                <input type="text" name="nome" id="nome" required autocomplete="off" placeholder="Insira o Nome da Empresa">
+                <div class="underline"></div>
+            </div>
+
+            <div class="input-field">
+                <input type="tel" name="telefone" id="telefone" required autocomplete="off" onkeypress="mascaraTelefone()" maxlength="13" placeholder="Insira o Telefone Comercial">
+                <div class="underline"></div>
+            </div><br>
+
+            <div class="input-field">
+                <input type="text" name="cnpj" id="cnpj" required autocomplete="off" onkeypress="validaCnpj()" maxlength="18" placeholder="Insira seu CNPJ">
+                <div class="underline"></div>
+            </div><br>
+
+            <div class="input-field">
+                <input type="email" name="email" id="email" required autocomplete="off" onkeypress="validaEmail()" placeholder="Insira o Email Comercial">
+                <div class="underline"></div>
+            </div><br>
+
+            <div class="input-field">
+                <input type="text" name="endereco" id="endereco" required autocomplete="off" placeholder="Insira o Endereço (Rua Ex, 000)">
+                <div class="underline"></div>
+            </div><br>
+            <input type="submit" class="submit" value="Registre-se">
+        </form>
+    </main>
+    <script src="js/valida-telefone.js"></script>
+    <script src="js/valida-cnpj.js"></script>
+    <script src="js/valida-email.js"></script>
+</body>
+</html>

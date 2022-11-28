@@ -1,0 +1,57 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/global.css">
+</head>
+<body>
+
+    <nav id="menu-h">
+        <ul>
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li><a href="produtos.html">Produtos</a></li>
+            
+            <li><a href="nossa-historia.html">Quem Somos</a></li>
+            
+            <li><a href="https://instagram.com/boomb.sp/">Contato</a></li>
+            
+            <li><a href="login.html">Entrar</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h2>Login</h2>
+        <form action="db/login.php" method="POST">
+            <!-- o usuário insere o email ou o nome-->
+            <div class="input-field">
+                <input type="text" name="email" id="email" autocomplete="off" required placeholder="Insira Seu Email">
+                <div class="underline"></div>
+            </div>
+            <!-- o usuário insere a senha cadastrada-->
+            <div class="input-field">
+                <input type="password" name="senha" id="password" autocomplete="off" required placeholder="Insira Sua Senha">
+                <div class="underline"></div>
+            </div> <br>
+            <!-- o usuário marca se ele quer que o site realize o login assim que ele abrir-->
+            <h4><input type="checkbox" class="checkbox"><span class="checkbox-span">Lembrar de Mim</span></h4><br>
+
+            <input type="submit" value="Logar" class="submit">
+        </form>
+
+        <p>Novo na loja?</p>
+        <a href="registro.html"><input type="button" class="submit" value="Registrar-se"></a>
+
+            <p>Esqueceu sua Senha?</p>
+            <a href="recuperar-senha.html"><input type="button" class="submit" value="Recuperar Senha"></a>
+
+
+    </main>
+</body>
+</html>

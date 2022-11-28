@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
+    <title>Recuperar Senha</title>
+    <link rel="stylesheet" href="assets/global.css">
+</head>
+<body>
+<main class="container">
+       <h2>Estou com problemas</h2>
+       <p>Insira seu email e enviaremos um link para você voltar a acessar sua conta</p> <br>
+        <form action="email/sendmail.php" method="post"> <!-- conexão com a página que envia o email -->
+        <div class="input-field">
+                <input type="email" name="Email" id="Email" autocomplete="off" required placeholder="Email"> <!-- o usuário insere o email -->
+                <div class="underline"></div>
+            </div> <br>
+            <input type="submit" class="submit" value="Continuar"><br>
+           
+        </form>
+
+        <p>Lembrou a Senha?</p>
+        <a href="login.html"><input type="button" class="submit" value="Logar"></a>
+
+    </main>
+
+</body>
+
+</html>
